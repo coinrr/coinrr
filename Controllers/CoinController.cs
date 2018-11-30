@@ -37,10 +37,10 @@ namespace Coinrr.Controllers
             return View(model);
         }
 
-        public IActionResult Topic(int coinId)
+        public IActionResult Topic(int id)
         {
-            var coin = _coinService.GetById(coinId);
-            var posts = _postService.GetPostsByCoin(coinId);
+            var coin = _coinService.GetById(id);
+            var posts = coin.Posts;
 
             var postListings = posts.Select(p => new PostListingModel 
             {
@@ -52,13 +52,31 @@ namespace Coinrr.Controllers
                 RepliesCount = p.Replies.Count(),
                 Coin = BuildCoinListing(p)
             });
+            
+            var model = new CoinTopicModel
+            {
+                Posts = postListings,
+                Coin = BuildCoinListing(coin)
+            };
 
-            return View();
+            return View(model);
         }
 
         private CoinListingModel BuildCoinListing(Post p)
         {
-            throw new NotImplementedException();
+            var coin = p.Coin;
+            return BuildCoinListing(coin);
+        }
+        private CoinListingModel BuildCoinListing(Coin coin)
+        {
+            return new CoinListingModel
+            {
+                Id = coin.Id,
+                Name = coin.Name,
+                Symbol = coin.Symbol,
+                Description = coin.Description,
+                ImageUrl = coin.ImageUrl
+            };
         }
     }
 }

@@ -42,6 +42,7 @@ namespace Coinrr
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             
             services.AddScoped<ICoinService, CoinService>();
+            services.AddScoped<IPostService, PostService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
