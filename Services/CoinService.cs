@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Coinrr.Data;
 using Coinrr.EntityModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Coinrr.Services
 {
@@ -26,7 +27,8 @@ namespace Coinrr.Services
 
         public IEnumerable<Coin> GetAll()
         {
-            return _context.Coins;
+            return _context.Coins
+                .Include(c => c.Posts);
         }
 
         public Coin GetById(int coinId)

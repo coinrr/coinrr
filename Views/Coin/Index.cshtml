@@ -1,0 +1,19 @@
+@model Coinrr.Models.Coin.CoinIndexModel
+
+<h1>Coins</h1>
+
+<table class="table table-hover" id="coinIndexTable">
+    <tbody>
+        @foreach(var coin in Model.CoinList)
+        {
+            <tr>
+                <td>
+                    @coin.Name
+                </td>
+                <td>
+                    @coin.Description
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

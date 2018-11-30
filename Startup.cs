@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Coinrr.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Coinrr.Services;
 
 namespace Coinrr
 {
@@ -39,6 +40,8 @@ namespace Coinrr
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            
+            services.AddScoped<ICoinService, CoinService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
