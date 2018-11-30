@@ -8,7 +8,9 @@
         {
             <tr>
                 <td>
-                    @coin.Name
+                    <a asp-controller="Coin" asp-action="Topic" asp-route-id="@coin.Id">
+                        @coin.Name
+                    </a>
                 </td>
                 <td>
                     @coin.Description
