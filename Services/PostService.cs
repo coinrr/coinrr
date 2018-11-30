@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Coinrr.Data;
 using Coinrr.EntityModel;
+using Microsoft.EntityFrameworkCore;
 
 namespace Coinrr.Services
 {
@@ -41,7 +42,12 @@ namespace Coinrr.Services
 
         public Post GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _context.Posts.Where(p => p.Id == id)
+                .Include(p => p.User)
+                .Include(p => p.Replies)
+                    .ThenInclude(r => r.User)
+                .Include(p => p.Coin)
+                .First();
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
@@ -51,11 +57,9 @@ namespace Coinrr.Services
 
         public IEnumerable<Post> GetPostsByCoin(int coinId)
         {
-            var posts = _context.Coins
+            return _context.Coins
                 .Where(c => c.Id == coinId).First()
                 .Posts;
-
-            return posts;
         }
     }
 }

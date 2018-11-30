@@ -11,10 +11,8 @@ namespace Coinrr.Controllers
     public class CoinController : Controller
     {
         private readonly ICoinService _coinService;
-        private readonly IPostService _postService;
-        public CoinController(ICoinService coinService, IPostService postService)
+        public CoinController(ICoinService coinService)
         {
-            _postService = postService;
             _coinService = coinService;
         }
 
