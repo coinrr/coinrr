@@ -84,7 +84,7 @@ using Coinrr.Models;
             WriteLiteral("                <tr>\n                    <td>\n                        ");
             EndContext();
             BeginContext(276, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a39db6d15e1a416d8cbe7b78a05551c3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b01d24b33644b8291a0b8e7aa122b20", async() => {
                 BeginContext(344, 29, true);
                 WriteLiteral("\n                            ");
                 EndContext();
@@ -189,7 +189,7 @@ else
             WriteLiteral(" posts yet.<br />\n            Why not\n            ");
             EndContext();
             BeginContext(937, 128, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3175a0c3d0f44b29d6690a318e6c732", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "01af6ca36c5944729e61c8a295fd751e", async() => {
                 BeginContext(1012, 49, true);
                 WriteLiteral("\n                <span>create</span>\n            ");
                 EndContext();

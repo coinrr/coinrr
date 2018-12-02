@@ -32,17 +32,12 @@ namespace Coinrr.Services
                 .Include(c => c.Posts);
         }
 
-        public Coin GetById(int coinId)
+        public Coin GetById(int id)
         {
-            var coin = _context.Coins.Where(c => c.Id == coinId)
-                .Include(c => c.Posts)
-                    .ThenInclude(p => p.User)
-                .Include(c => c.Posts)
-                    .ThenInclude(p => p.Replies)
-                        .ThenInclude(r => r.User)
+            return _context.Coins.Where(c => c.Id == id)
+                .Include(c => c.Posts).ThenInclude(p => p.User)
+                .Include(c => c.Posts).ThenInclude(p => p.Replies).ThenInclude(r => r.User)
                 .FirstOrDefault();
-
-            return coin;
         }
 
         public Task UpdateCoinDescription(int coinId, string newDescription)

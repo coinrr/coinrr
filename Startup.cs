@@ -13,6 +13,7 @@ using Coinrr.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Coinrr.Services;
+using Coinrr.EntityModel;
 
 namespace Coinrr
 {
@@ -38,9 +39,12 @@ namespace Coinrr
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
             
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
+
             services.AddScoped<ICoinService, CoinService>();
             services.AddScoped<IPostService, PostService>();
 
