@@ -43,3 +43,4 @@
 /Users/jackal/Projects/Coinrr/obj/Debug/netcoreapp2.1/Razor/Views/Coin/Index.g.cshtml.cs
 /Users/jackal/Projects/Coinrr/obj/Debug/netcoreapp2.1/Razor/Views/Coin/Topic.g.cshtml.cs
 /Users/jackal/Projects/Coinrr/obj/Debug/netcoreapp2.1/Razor/Views/Post/Index.g.cshtml.cs
+/Users/jackal/Projects/Coinrr/obj/Debug/netcoreapp2.1/Razor/Views/Post/Create.g.cshtml.cs
