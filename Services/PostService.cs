@@ -38,15 +38,17 @@ namespace Coinrr.Services
 
         public IEnumerable<Post> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _context.Posts
+                .Include(p => p.User)
+                .Include(p => p.Replies).ThenInclude(r => r.User)
+                .Include(p => p.Coin);
         }
 
         public Post GetById(int id)
         {
             return _context.Posts.Where(p => p.Id == id)
                 .Include(p => p.User)
-                .Include(p => p.Replies)
-                    .ThenInclude(r => r.User)
+                .Include(p => p.Replies).ThenInclude(r => r.User)
                 .Include(p => p.Coin)
                 .First();
         }
@@ -54,6 +56,11 @@ namespace Coinrr.Services
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
         {
             throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<Post> GetLatestPosts(int n)
+        {
+           return GetAll().OrderByDescending(p => p.Created).Take(n);
         }
 
         public IEnumerable<Post> GetPostsByCoin(int coinId)
