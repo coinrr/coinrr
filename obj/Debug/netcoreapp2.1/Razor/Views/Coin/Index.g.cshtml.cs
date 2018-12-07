@@ -64,7 +64,7 @@ using Coinrr.Models;
             WriteLiteral("            <tr>\n                <td>\n                    ");
             EndContext();
             BeginContext(237, 128, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5cda593fe590472ca79c37170507841c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bcfc44e1bb66475db0332f484000ff20", async() => {
                 BeginContext(305, 25, true);
                 WriteLiteral("\n                        ");
                 EndContext();

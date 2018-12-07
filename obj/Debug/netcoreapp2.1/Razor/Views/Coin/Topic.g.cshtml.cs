@@ -67,7 +67,7 @@ using Coinrr.Models;
             WriteLiteral(" Forum!</h1>\n\n<span id=\"headingBtn\">\n    ");
             EndContext();
             BeginContext(118, 141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b127ebf8e87e4d42ad3216d8233a2f7c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8636f927493f4ec8bceda2c1c3e48046", async() => {
                 BeginContext(231, 24, true);
                 WriteLiteral("\n       Create Post\n    ");
                 EndContext();
@@ -123,7 +123,7 @@ using Coinrr.Models;
             WriteLiteral("                <tr>\n                    <td>\n                        ");
             EndContext();
             BeginContext(495, 135, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9e000e1a3b624f3cbad8faea89cdb0f1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00ef30bb2f9f4a4190aabf22f974b303", async() => {
                 BeginContext(561, 29, true);
                 WriteLiteral("\n                            ");
                 EndContext();
@@ -228,7 +228,7 @@ else
             WriteLiteral(" posts yet.<br />\n            Why not\n            ");
             EndContext();
             BeginContext(1154, 128, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a2ee0bcbd92a4ea0ad2976ca69d7d339", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15b330a237d54d70b400a0a06554d2c0", async() => {
                 BeginContext(1229, 49, true);
                 WriteLiteral("\n                <span>create</span>\n            ");
                 EndContext();

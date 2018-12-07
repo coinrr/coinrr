@@ -10,8 +10,8 @@
     <title>@ViewData["Title"] - Coinrr</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -24,14 +24,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand navLogo" asp-controller="Home" asp-action="Index"></a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-controller="Forum" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Coin" asp-action="Index">Home</a></li>
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <li class="dropdown">
@@ -51,24 +51,26 @@
                         </li>
                     }
                 </ul>
-                @if (!SignInManager.IsSignedIn(User))
-                {
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a asp-controller="Account" asp-action="Login">Sign In</a></li>
-                        <li class="active"><a asp-controller="Account" asp-action="Register">Register</a></li>
-                    </ul>
-                }
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar">
+                    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li>Hello, @UserManager.GetUserName(User)</li>
-                            <li><a asp-controller="Account" asp-action="Logout">Sign Out</a></li>
+                            <li>
+                                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                            </li>
+                            <li>
+                                <button type="submit" class="btn btn-link navbar-btn navbar-link">Logout</button>
+                            </li>
                         </ul>
                     </form>
-                    
                 }
-                <partial name="_LoginPartial" />
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                        <li><a asp-area="Identity" asp-page="/Account/Login">Login</a></li>
+                    </ul>
+                }
             </div>
         </div>
     </nav>
