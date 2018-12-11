@@ -39,6 +39,8 @@ namespace Coinrr.Controllers
                 SearchQuery = searchQuery,
                 EmptySearchResults = areNoResults
             };
+
+            return View(model);
         }
 
         private CoinListingModel BuildCoinList(Post post)
