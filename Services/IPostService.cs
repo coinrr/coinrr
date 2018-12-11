@@ -9,6 +9,7 @@ namespace Coinrr.Services
         Post GetById(int postId);
         IEnumerable<Post> GetAll();
         IEnumerable<Post> GetFilteredPosts(Coin coin, string searchQuery);
+        IEnumerable<Post> GetFilteredPosts(string searchQuery);
         IEnumerable<Post> GetPostsByCoin(int postId);
         IEnumerable<Post> GetLatestPosts(int n);
 

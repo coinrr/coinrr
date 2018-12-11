@@ -62,6 +62,13 @@ namespace Coinrr.Services
                     || post.Content.Contains(searchQuery));
         }
 
+        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
+        {
+            return GetAll().Where(post
+                => post.Title.Contains(searchQuery) 
+                || post.Content.Contains(searchQuery));
+        }
+
         public IEnumerable<Post> GetLatestPosts(int n)
         {
             return GetAll().OrderByDescending(p => p.Created).Take(n);
