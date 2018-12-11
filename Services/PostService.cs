@@ -53,14 +53,18 @@ namespace Coinrr.Services
                 .First();
         }
 
-        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
+        public IEnumerable<Post> GetFilteredPosts(Coin coin, string searchQuery)
         {
-            throw new System.NotImplementedException();
+            return string.IsNullOrEmpty(searchQuery)
+                ? coin.Posts
+                : coin.Posts.Where(post 
+                    => post.Title.Contains(searchQuery) 
+                    || post.Content.Contains(searchQuery));
         }
 
         public IEnumerable<Post> GetLatestPosts(int n)
         {
-           return GetAll().OrderByDescending(p => p.Created).Take(n);
+            return GetAll().OrderByDescending(p => p.Created).Take(n);
         }
 
         public IEnumerable<Post> GetPostsByCoin(int coinId)

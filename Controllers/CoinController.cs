@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Coinrr.EntityModel;
 using Coinrr.Models.Coin;
@@ -11,9 +12,11 @@ namespace Coinrr.Controllers
     public class CoinController : Controller
     {
         private readonly ICoinService _coinService;
-        public CoinController(ICoinService coinService)
+        private readonly IPostService _postService;
+        public CoinController(ICoinService coinService, IPostService postService)
         {
             _coinService = coinService;
+            _postService = postService;
         }
 
         public IActionResult Index()
@@ -35,10 +38,12 @@ namespace Coinrr.Controllers
             return View(model);
         }
 
-        public IActionResult Topic(int id)
+        public IActionResult Topic(int id, string searchQuery)
         {
             var coin = _coinService.GetById(id);
-            var posts = coin.Posts;
+            var posts = new List<Post>();
+
+            posts = _postService.GetFilteredPosts(coin, searchQuery).ToList();
 
             var postListings = posts.Select(p => new PostListingModel 
             {
@@ -60,6 +65,11 @@ namespace Coinrr.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public IActionResult Search(int id, string searchQuery)
+        {
+            return RedirectToAction("Topic", new { id, searchQuery });
+        }
         private CoinListingModel BuildCoinListing(Post p)
         {
             var coin = p.Coin;
