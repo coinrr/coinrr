@@ -7,5 +7,6 @@ namespace Coinrr.Models.Coin
     {
         public CoinListingModel Coin { get; set; }
         public IEnumerable<PostListingModel> Posts { get; set; }
+        public string SearchQuery { get; set; }
     }
 }

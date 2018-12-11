@@ -13,7 +13,11 @@ namespace Coinrr.Models.Post
         public string AuthorImageUrl { get; set; }
         public DateTime Created { get; set; }
         public string PostContent { get; set; }
+        public bool IsAuthorAdmin { get; set; }
 
+
+        public int CoinId { get; set; }
+        public string CoinName { get; set; }
         public IEnumerable<PostReplyModel> Replies { get; set; }
     }
 }

@@ -37,7 +37,10 @@ namespace Coinrr.Controllers
                 AuthorImageUrl = post.User.ProfileImageUrl,
                 Created = post.Created,
                 PostContent = post.Content,
-                Replies = replies
+                Replies = replies,
+                CoinId = post.Coin.Id,
+                CoinName = post.Coin.Name,
+                IsAuthorAdmin = IsAuthorAdmin(post.User)
             };
             return View(model);
         }
@@ -94,8 +97,14 @@ namespace Coinrr.Controllers
                 AuthorName = r.User.Email,
                 AuthorImageUrl = r.User.ProfileImageUrl,
                 Created = r.Created,
-                ReplyContent = r.Content
+                ReplyContent = r.Content,
+                IsAuthorAdmin = IsAuthorAdmin(r.User)
             });
+        }
+        private bool IsAuthorAdmin(ApplicationUser user)
+        {
+            return _userManager.GetRolesAsync(user)
+                .Result.Contains("Admin");
         }
     }
 }
