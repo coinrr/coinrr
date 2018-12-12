@@ -5,7 +5,7 @@
         <div class="sectionHeading">
             <span>Search Results for: @Model.SearchQuery</span>
 
-            <form asp-controller="Coin" asp-action="Search" method="post">
+            <form asp-controller="Search" asp-action="Search" method="post">
                 <div class="searchForm">
                     <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)">
                     <button type="submit" class="btn btn-forumSearch">
@@ -40,11 +40,9 @@
                                             </span>
                                             in:
                                             <span class="postForum">
-                                                <a asp-controller="Coin" asp-action="Topic" asp-route-id="@post.Coin.Id"></a>
-                                            </span>
-                                            on:
-                                            <span class="postDate">
-                                                @post.DatePosted
+                                                <a asp-controller="Coin" asp-action="Topic" asp-route-id="@post.Coin.Id">
+                                                    @post.Coin.Name
+                                                </a>
                                             </span>
                                         </div>
                                     </div>
