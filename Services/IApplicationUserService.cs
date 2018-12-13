@@ -9,7 +9,7 @@ namespace Coinrr.Services
     {
         ApplicationUser GetById(string id);
         IEnumerable<ApplicationUser> GetAll();
-        Task SetProfielImage(string id, Uri uri);
+        Task SetProfielImageAsync(string id, Uri uri);
         Task IncrementRating(string id, Type type);
     }
 }

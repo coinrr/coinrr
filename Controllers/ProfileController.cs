@@ -1,4 +1,6 @@
 using Coinrr.EntityModel;
+using Coinrr.Models.ApplicationUser;
+using Coinrr.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +18,22 @@ namespace Coinrr.Controllers
             _uploadService = uploadService;
         }
 
-        public IActionResult Detail(string id)
+        public async System.Threading.Tasks.Task<IActionResult> DetailAsync(string id)
         {
+            var user = _userService.GetById(id);
+            var userRoles = await _userManager.GetRolesAsync(user);
 
+            var model = new ProfileModel()
+            {
+                UserId = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                ProfileImageUrl = user.ProfileImageUrl,
+                MemberSince = user.MemberSince,
+                IsAdmin = userRoles.Contains("Admin")
+            };
+
+            return View(model);
         }
 
     }

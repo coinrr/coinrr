@@ -48,11 +48,13 @@ namespace Coinrr
             services.AddScoped<ICoinService, CoinService>();
             services.AddScoped<IPostService, PostService>();
 
+            services.AddTransient<DataSeeder>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DataSeeder dataSeeder)
         {
             if (env.IsDevelopment())
             {
@@ -64,6 +66,8 @@ namespace Coinrr
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            dataSeeder.SeedSuperUser();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

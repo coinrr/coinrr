@@ -73,12 +73,12 @@ using Coinrr.Models;
                 ");
             EndContext();
             BeginContext(373, 198, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89997d2e94a54d249f7cb6bff3bf8ef0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae86ea7ba5a34968a6984e2648f611d6", async() => {
                 BeginContext(437, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(459, 86, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "869c750de1c34317bb739c15d6c747ef", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "34adced041f146faade161f8f7122c0f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -159,7 +159,7 @@ WriteAttributeValue("", 1046, post.Coin.ImageUrl, 1046, 19, false);
             WriteLiteral("></div>\r\n                            <div class=\"postTitle\">\r\n                                ");
             EndContext();
             BeginContext(1162, 155, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "701ee82b1d704b2a875c9d20269d4ddb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a95eab526398453eb65eec8eb554afb6", async() => {
                 BeginContext(1230, 38, true);
                 WriteLiteral("\r\n                                    ");
                 EndContext();
@@ -270,7 +270,7 @@ WriteAttributeValue("", 1046, post.Coin.ImageUrl, 1046, 19, false);
             WriteLiteral("                                <span class=\"postUser\">\r\n                                    ");
             EndContext();
             BeginContext(2087, 181, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a9dc83a342684561b367e803c75cb648", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "96d5691c9712452dbd590b3e026fad0b", async() => {
                 BeginContext(2165, 42, true);
                 WriteLiteral("\r\n                                        ");
                 EndContext();
