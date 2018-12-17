@@ -47,6 +47,8 @@ namespace Coinrr
 
             services.AddScoped<ICoinService, CoinService>();
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IApplicationUserService, ApplicationUserService>();
+            services.AddScoped<IUploadService, UploadService>();
 
             services.AddTransient<DataSeeder>();
 
