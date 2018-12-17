@@ -21,9 +21,10 @@ namespace Coinrr.Services
             await _context.SaveChangesAsync();
         }
 
-        public Task AddReply(PostReply reply)
+        public async Task AddReply(PostReply reply)
         {
-            throw new System.NotImplementedException();
+            _context.PostReplies.Add(reply);
+            await _context.SaveChangesAsync();
         }
 
         public Task Delete(int postId)

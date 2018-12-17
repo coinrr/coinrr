@@ -1,0 +1,52 @@
+@model Coinrr.Models.Reply.PostReplyModel
+
+<div class="container body-content">
+    <div class="row sectionHeader">
+        <div class="sectionHeading">
+            Reply | @Model.PostTitle
+        </div>
+        <div class="forumLogo" style="background-image: url(@Model.CoinImageUrl)"></div>
+        <span id="headingBtn">
+            <a asp-controller="Post"
+                asp-action="Index"
+                asp-route-id="@Model.PostId"
+                class="btn btn-back">
+                Back to Post
+            </a>
+        </span>>
+    </div>
+    <div class="row">
+        <div id="postReply">
+            <h3>
+                @Model.PostTitle
+            </h3>
+            <p>
+                @Model.PostContent
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="createReply">
+            <div class="authorBlock">
+                You're submiiting this Reply as @Model.AuthorName
+            </div>
+
+            <form asp-action="AddReply" method="post" id="addPostForm">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ReplyContent">
+                        Reply: 
+                    </label>
+                    <textarea asp-for="ReplyContent" rows="20" class="form-control" placeholder="Your reply...">
+
+                    </textarea>
+                    <span asp-validation-for="ReplyContent" class="text-danger"></span>
+                </div>
+                <button type="submit" id="submitReplyBtn" class="btn btn-submitPost">Submit Reply</button>
+                <input asp-for="AuthorId" type="hideen" />
+                <input asp-for="PostId" type="hideen" />
+                <input asp-for="CoinId" type="hideen" />
+            </form>
+        </div>
+    </div>
+</div>
