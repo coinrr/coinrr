@@ -71,7 +71,7 @@ using Coinrr.Models;
             WriteLiteral("\n            </span>\n            <span id=\"headingBtn\">\n                ");
             EndContext();
             BeginContext(288, 159, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b5b7e3c98e104c16b381e31de597a277", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9909b59a6d904428a7a0ea787a74c966", async() => {
                 BeginContext(382, 29, true);
                 WriteLiteral("\n                    Back to ");
                 EndContext();
@@ -132,7 +132,7 @@ WriteAttributeValue("", 662, Model.AuthorImageUrl, 662, 21, false);
             WriteLiteral("></div>\n            ");
             EndContext();
             BeginContext(706, 130, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e97ba3541a342d18a64f81a1c883ba4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3b046d74f994811b5d4cfe2047eeef9", async() => {
                 BeginContext(785, 17, true);
                 WriteLiteral("\n                ");
                 EndContext();
@@ -225,7 +225,7 @@ WriteAttributeValue("", 662, Model.AuthorImageUrl, 662, 21, false);
             WriteLiteral("        <div class=\"row\">\n            <span>\n                ");
             EndContext();
             BeginContext(1367, 148, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9822a84ccd9d4f26a868dd9a9e6969f8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1e153555cfc498c87a43def151bf426", async() => {
                 BeginContext(1463, 48, true);
                 WriteLiteral("\n                    Post Reply\n                ");
                 EndContext();
@@ -295,7 +295,7 @@ WriteAttributeValue("", 1829, reply.AuthorImageUrl, 1829, 21, false);
             WriteLiteral("></div>\n                    ");
             EndContext();
             BeginContext(1880, 146, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c536f0cbcb9e4fbb9ee9390c6fefb1db", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75744a269f9840d38c3aa73b280396e6", async() => {
                 BeginContext(1959, 25, true);
                 WriteLiteral("\n                        ");
                 EndContext();
