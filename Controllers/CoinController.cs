@@ -1,11 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Coinrr.EntityModel;
 using Coinrr.Models.Coin;
 using Coinrr.Models.Post;
 using Coinrr.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace Coinrr.Controllers
 {
@@ -13,10 +18,19 @@ namespace Coinrr.Controllers
     {
         private readonly ICoinService _coinService;
         private readonly IPostService _postService;
-        public CoinController(ICoinService coinService, IPostService postService)
+        private readonly IUploadService _uploadService;
+        private readonly IConfiguration _configuration;
+
+        public CoinController(
+            ICoinService coinService, 
+            IPostService postService,
+            IUploadService uploadService,
+            IConfiguration configuration)
         {
             _coinService = coinService;
             _postService = postService;
+            _uploadService = uploadService;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -70,6 +84,59 @@ namespace Coinrr.Controllers
         {
             return RedirectToAction("Topic", new { id, searchQuery });
         }
+        
+        public IActionResult Create()
+        {
+            var model = new AddCoinModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCoin(AddCoinModel model)
+        {
+            var imageUri = "/images/users/default.png";
+
+            if (model.ImageUpload != null )
+            {
+                var blockBlob = await UploadCoinImage(model.ImageUpload);
+                imageUri = blockBlob.Uri.AbsoluteUri;
+            }
+
+            var coin = new Coin
+            {
+                Name = model.Title,
+                Description = model.Description,
+                ImageUrl = imageUri
+            };
+
+            await _coinService.Create(coin);
+            return RedirectToAction("Index", "Coin");
+        }
+
+        private async Task<CloudBlockBlob> UploadCoinImage(IFormFile file)
+        {
+            // connect to azure storage account container
+            var connectionString = _configuration.GetConnectionString("AzureStorageAccount");
+            
+            // get blob container
+            var container = _uploadService.GetBlobContainer(connectionString);
+
+            // pasrse the content disposition response header
+            var contentDisposition = ContentDispositionHeaderValue.Parse(file.ContentDisposition);
+
+            // grab the filename
+            var filename = contentDisposition.FileName.Trim('"');
+
+            // get a reference to a block blob
+            var blockBlob = container.GetBlockBlobReference(filename);
+
+            // on the block blob , upload our file <-- file uploaded to the cloud
+            await blockBlob.UploadFromStreamAsync(file.OpenReadStream());
+
+            return blockBlob;
+
+        }
+
         private CoinListingModel BuildCoinListing(Post p)
         {
             var coin = p.Coin;
