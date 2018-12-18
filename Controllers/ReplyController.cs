@@ -3,11 +3,13 @@ using System.Threading.Tasks;
 using Coinrr.EntityModel;
 using Coinrr.Models.Reply;
 using Coinrr.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Coinrr.Controllers
 {
+    [Authorize]
     public class ReplyController : Controller
     {
         private readonly IPostService _postService;

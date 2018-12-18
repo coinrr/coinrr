@@ -6,11 +6,13 @@ using Coinrr.EntityModel;
 using Coinrr.Models.Post;
 using Coinrr.Models.Reply;
 using Coinrr.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Coinrr.Controllers
 {
+    [Authorize]
     public class PostController : Controller
     {
         private readonly IPostService _postService;

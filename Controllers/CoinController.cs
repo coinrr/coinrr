@@ -7,6 +7,7 @@ using Coinrr.EntityModel;
 using Coinrr.Models.Coin;
 using Coinrr.Models.Post;
 using Coinrr.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -85,6 +86,7 @@ namespace Coinrr.Controllers
             return RedirectToAction("Topic", new { id, searchQuery });
         }
         
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             var model = new AddCoinModel();
@@ -92,6 +94,7 @@ namespace Coinrr.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddCoin(AddCoinModel model)
         {
             var imageUri = "/images/users/default.png";

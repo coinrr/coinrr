@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Coinrr.EntityModel;
 using Coinrr.Models.ApplicationUser;
 using Coinrr.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Coinrr.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private readonly IUploadService _uploadService;
