@@ -3,7 +3,7 @@
 <div class="container body-content">
     <div class="row sectionHeader">
         <div class="sectionHeading">
-            Reply | @Model.PostTitle
+            <!-- Reply | @Model.PostTitle -->
         </div>
         <div class="forumLogo" style="background-image: url(@Model.CoinImageUrl)"></div>
         <span id="headingBtn">
@@ -43,9 +43,9 @@
                     <span asp-validation-for="ReplyContent" class="text-danger"></span>
                 </div>
                 <button type="submit" id="submitReplyBtn" class="btn btn-submitPost">Submit Reply</button>
-                <input asp-for="AuthorId" type="hideen" />
-                <input asp-for="PostId" type="hideen" />
-                <input asp-for="CoinId" type="hideen" />
+                <input asp-for="AuthorId" type="hidden" />
+                <input asp-for="PostId" type="hidden" />
+                <input asp-for="CoinId" type="hidden" />
             </form>
         </div>
     </div>

@@ -41,7 +41,7 @@ namespace Coinrr.Controllers
                 Created = DateTime.Now,
             };
 
-            return View();
+            return View(model);
 
         }
 
@@ -60,7 +60,7 @@ namespace Coinrr.Controllers
 
         private PostReply BuildReply(PostReplyModel model, ApplicationUser user)
         {
-            var post = _postService.GetById(model.userId);
+            var post = _postService.GetById(model.PostId);
 
             return new PostReply
             {
@@ -68,7 +68,7 @@ namespace Coinrr.Controllers
                 Content = model.ReplyContent,
                 Created = DateTime.Now,
                 User = user
-            }
+            };
         }
     }
 }
