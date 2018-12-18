@@ -92,7 +92,7 @@ using Coinrr.Models;
             WriteLiteral("                <span id=\"headingBtn\">\n                    ");
             EndContext();
             BeginContext(330, 180, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe5ab2140de44926b5cc68d53f5c37b3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46592ea519084db3a9d970489ebe5a45", async() => {
                 BeginContext(449, 57, true);
                 WriteLiteral("\n                        Create Post\n                    ");
                 EndContext();
@@ -138,12 +138,12 @@ using Coinrr.Models;
             WriteLiteral("            ");
             EndContext();
             BeginContext(561, 506, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "52d56a67522d423799d4c6334f5c15e8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8f75b9a0b6a4247bd2db28adf6d55bc", async() => {
                 BeginContext(623, 62, true);
                 WriteLiteral("\n                <div class=\"searchForm\">\n                    ");
                 EndContext();
                 BeginContext(685, 109, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1275216b479e43d7a4422941318d9df5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "f4cf50aefab346899eb427bcb5f1aa9a", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -171,7 +171,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\n                    <button type=\"submit\" class=\"btn btn-forumSearch\">\n                        <i class=\"material-icons\">search</i>\n                    </button>\n                </div>\n                ");
                 EndContext();
                 BeginContext(996, 51, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f195268ca3a14f81bc268d4c4d2ef1ef", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "c1187f70f5e84d9cb37a7fb8711c96f5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -253,7 +253,7 @@ WriteAttributeValue("", 1188, Model.Coin.ImageUrl, 1188, 20, false);
             WriteLiteral("                <p>\n                    <span>\n                        You must be a \n                        ");
             EndContext();
             BeginContext(1449, 125, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10f6ec69df8d4ac4ba27e3bcc8556fae", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7c85af12eaa646ebbb6a21fadc5d8ca1", async() => {
                 BeginContext(1499, 71, true);
                 WriteLiteral("\n                            registered member\n                        ");
                 EndContext();
@@ -303,7 +303,7 @@ WriteAttributeValue("", 1188, Model.Coin.ImageUrl, 1188, 20, false);
             WriteLiteral("                        <tr>\n                            <td>\n                                <div class=\"postData\">\n                                    <div class=\"postTitle\">\n                                        ");
             EndContext();
             BeginContext(2191, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7af2933197514300b2e234f95aefd203", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d120908e6f84af3bc2d31856210ce6a", async() => {
                 BeginContext(2260, 10, false);
 #line 54 "/Users/jackal/Projects/Coinrr/Views/Coin/Topic.cshtml"
                                                                                                        Write(post.Title);
@@ -349,7 +349,7 @@ WriteAttributeValue("", 1188, Model.Coin.ImageUrl, 1188, 20, false);
                                                 ");
             EndContext();
             BeginContext(2546, 200, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "350b6ec2bbb94edda4761cf60cca501e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "16e390503d264c52ab5e73e77943b321", async() => {
                 BeginContext(2624, 53, true);
                 WriteLiteral("\n                                                    ");
                 EndContext();
@@ -452,7 +452,7 @@ WriteAttributeValue("", 1188, Model.Coin.ImageUrl, 1188, 20, false);
             WriteLiteral("            <div class=\"noPosts\">\n                <i class=\"material-icons md-72\">question_answer</i>\n                <h3>\n                    It looks like there are no posts to be found.\n                    Why not \n                    ");
             EndContext();
             BeginContext(3938, 144, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bf2e0d485f83456bbd8c1d0ea29fcd1e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e757ac857cdc4fb694f5d4826b9b8bef", async() => {
                 BeginContext(4013, 65, true);
                 WriteLiteral("\n                        <span> Post </span>\n                    ");
                 EndContext();
@@ -544,7 +544,7 @@ WriteAttributeValue("", 1188, Model.Coin.ImageUrl, 1188, 20, false);
             WriteLiteral("                <tr>\n                    <td>\n                        ");
             EndContext();
             BeginContext(4777, 135, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f95e44f01e4a4fdb84ffbe26863ecc08", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc5192947d7c458eb738018eef206669", async() => {
                 BeginContext(4843, 29, true);
                 WriteLiteral("\n                            ");
                 EndContext();
@@ -649,7 +649,7 @@ else
             WriteLiteral(" posts yet.<br />\n            Why not\n            ");
             EndContext();
             BeginContext(5436, 128, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0040760db564459792dca37c3741abd5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "70f892b1412a4ccf99d84bb41a8fa153", async() => {
                 BeginContext(5511, 49, true);
                 WriteLiteral("\n                <span>create</span>\n            ");
                 EndContext();

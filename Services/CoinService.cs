@@ -16,14 +16,17 @@ namespace Coinrr.Services
             _context = context;
         }
 
-        public Task Create(Coin coin)
+        public async Task Create(Coin coin)
         {
-            throw new System.NotImplementedException();
+            _context.Add(coin);
+            await _context.SaveChangesAsync();
         }
 
-        public Task Delete(int coinId)
+        public async Task Delete(int coinId)
         {
-            throw new System.NotImplementedException();
+            var coin = GetById(coinId);
+            _context.Remove(coin);
+            await _context.SaveChangesAsync();
         }
 
         public IEnumerable<Coin> GetAll()

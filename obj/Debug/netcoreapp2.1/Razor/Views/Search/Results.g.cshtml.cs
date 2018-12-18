@@ -79,12 +79,12 @@ using Coinrr.Models;
             WriteLiteral("</span>\n\n            ");
             EndContext();
             BeginContext(235, 440, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dc6aadfeb714436180e4073fc56d04c5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "990cdbe8fb89448dae2f07d5f43578df", async() => {
                 BeginContext(299, 62, true);
                 WriteLiteral("\n                <div class=\"searchForm\">\n                    ");
                 EndContext();
                 BeginContext(361, 109, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "89ec75a407ad4462aa480f02263fbe78", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "527d2e85c16b476eae8327af7c1dc7b7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -166,7 +166,7 @@ WriteAttributeValue("", 1113, post.Coin.ImageUrl, 1113, 19, false);
             WriteLiteral("></div>\n                                <div class=\"postData\">\n                                    <div class=\"postTitle\">\n                                        ");
             EndContext();
             BeginContext(1297, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a998d277e8d4009addf19b9ede53f87", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6de132cd3d24a2181e4bc633b4c8317", async() => {
                 BeginContext(1366, 10, false);
 #line 31 "/Users/jackal/Projects/Coinrr/Views/Search/Results.cshtml"
                                                                                                        Write(post.Title);
@@ -213,7 +213,7 @@ WriteAttributeValue("", 1113, post.Coin.ImageUrl, 1113, 19, false);
                                                 ");
             EndContext();
             BeginContext(1700, 200, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aff5c4311ddc4c7cbb0e6f080521ec10", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e971c80cd1444a8868e191152ab0a1b", async() => {
                 BeginContext(1778, 53, true);
                 WriteLiteral("\n                                                    ");
                 EndContext();
@@ -260,7 +260,7 @@ WriteAttributeValue("", 1113, post.Coin.ImageUrl, 1113, 19, false);
             WriteLiteral("\n                                            </span>\n                                            in:\n                                            <span class=\"postForum\">\n                                                ");
             EndContext();
             BeginContext(2118, 194, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "17425285a6524214a73f8225a9fd6e66", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "042fb141f50d447d85b381502a11174c", async() => {
                 BeginContext(2191, 53, true);
                 WriteLiteral("\n                                                    ");
                 EndContext();
