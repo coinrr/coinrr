@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Coinrr.Controllers
 {
-    [Authorize]
     public class PostController : Controller
     {
         private readonly IPostService _postService;
@@ -47,6 +46,7 @@ namespace Coinrr.Controllers
             return View(model);
         }
 
+        [Authorize]
         public IActionResult Create(int id)
         {
             //id is coin id
@@ -64,6 +64,7 @@ namespace Coinrr.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddPost(NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);

@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Coinrr.Controllers
 {
-    public class SearchController : Controller
+public class SearchController : Controller
     {
         private readonly IPostService _postService;
         public SearchController(IPostService postService)
